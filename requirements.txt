@@ -12,4 +12,3 @@ redis
 SQLAlchemy==1.4.48
 flasgger
 python-dotenv
-python-dotenv==1.0.0

@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 
 from my_project import create_app
 
-# Load environment variables from .env file
 load_dotenv()
 
 DEVELOPMENT_PORT = 5000
@@ -15,7 +14,6 @@ DEVELOPMENT = "development"
 PRODUCTION = "production"
 
 if __name__ == '__main__':
-    # Validate required environment variables
     required_env_vars = ['DATABASE_HOST', 'DATABASE_NAME', 'DATABASE_USER', 'DATABASE_PASSWORD']
     missing_vars = [var for var in required_env_vars if not os.environ.get(var)]
     
@@ -25,10 +23,8 @@ if __name__ == '__main__':
             f"Please check your .env file."
         )
     
-    # Get Flask environment
     flask_env = os.getenv('FLASK_ENV', DEVELOPMENT).lower()
     
-    # Build configuration from environment variables
     db_user = os.getenv('DATABASE_USER')
     db_password = os.getenv('DATABASE_PASSWORD')
     db_host = os.getenv('DATABASE_HOST')

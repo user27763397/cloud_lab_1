@@ -37,12 +37,15 @@ def create_bus_info() -> Response:
         schema:
           type: object
           properties:
-            bus_number:
+            bus_company:
               type: string
-              description: Bus number
-            capacity:
+              description: Bus company
+            route_id:
               type: integer
-              description: Bus capacity
+              description: Route ID
+            vehicle_type:
+              type: string
+              description: Vehicle type
     responses:
       201:
         description: Bus info created successfully

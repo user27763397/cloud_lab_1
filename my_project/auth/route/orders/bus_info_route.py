@@ -153,8 +153,8 @@ def patch_bus_info(bus_info_id: int) -> Response:
     return make_response("BusInfo updated", HTTPStatus.OK)
 
 
-@bus_info_bp.delete('/<int:bus_info_id>')
-def delete_bus_info(bus_info_id: int) -> Response:
+#@bus_info_bp.delete('/<int:bus_info_id>')
+#def delete_bus_info(bus_info_id: int) -> Response:
     """
     Delete bus info by ID
     ---
